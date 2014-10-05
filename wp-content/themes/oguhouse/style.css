@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* Theme Name: OGUHOUSE
+ * Author: OGURI
+ * Description: OGUHOUSE作成用のwordpressテーマです。
+ * Version: 2.0
+ * Author URI: http://54.64.115.198/
+ * Tags: OGUHOUSE
+ */
+/* ======================
+ * #1 header
+ * #2 contents
+ * #3 footer
+ * #9 icon
+ * ====================== */
+/* line 21, sass/style.sass */
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.15s ease;
+  transition: height 0.15s ease;
+}
+
+/* line 27, sass/style.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 29, sass/style.sass */
+a:hover, a:focus {
+  color: transparent;
+}
+
+/* line 32, sass/style.sass */
+li {
+  list-style: none;
+}
+
+/* line 34, sass/style.sass */
+html {
+  margin-top: 0 !important;
+}
+
+/* line 36, sass/style.sass */
+body {
+  background-color: #FFFFFF;
+  line-height: 1.3em;
+  font-size: 14px;
+  min-width: 1024px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ==============
+ * #9 icon
+ * ============== */
+/* line 47, sass/style.sass */
+.i-left {
+  margin-right: 5px;
+}
+
+/* line 49, sass/style.sass */
+.i-right {
+  margin-left: 5px;
+}
+
+/* line 51, sass/style.sass */
+.google {
+  color: #DF3737;
+}
+
+/* line 53, sass/style.sass */
+.git {
+  color: #3680B1;
+}
+
+/* line 55, sass/style.sass */
+.facebook {
+  color: #1F4096;
+}
+
+/* line 57, sass/style.sass */
+.twitter {
+  color: #5BCDE9;
+}
+
+/* line 59, sass/style.sass */
+.sns-icon {
+  color: #757575;
+}
+
+/* ==============
+ * #1 header
+ * ============== */
+/* line 64, sass/style.sass */
+#header {
+  padding: 20px 15px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+/* line 69, sass/style.sass */
+#header .header--sns {
+  float: right;
+  padding: 10px 5px 0 5px;
+}
+
+/* line 73, sass/style.sass */
+.frame_wave img {
+  width: 100%;
+  height: 400px;
+}
+
+/* line 77, sass/style.sass */
+.site--logo {
+  float: left;
+  width: 220px;
+  padding: 0 20px;
+}
+/* line 81, sass/style.sass */
+.site--logo a {
+  color: #757575;
+}
+/* line 83, sass/style.sass */
+.site--logo a .site--logo-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ==============
+ * #2 contents
+ * ============== */
+/* line 90, sass/style.sass */
+#content {
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* ==============
+ * #3 footer
+ * ============== */
+/* line 97, sass/style.sass */
+#footer {
+  clear: both;
+  padding: 20px 15px 5px 15px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+}
+/* line 102, sass/style.sass */
+#footer .f-contents {
+  padding: 20px;
+  overflow: hidden;
+}
+/* line 105, sass/style.sass */
+#footer .f-contents .f-sns {
+  float: left;
+}
+/* line 107, sass/style.sass */
+#footer .f-contents .f-sns li {
+  float: left;
+  padding: 10px;
+  display: inline-block;
+}
+/* line 111, sass/style.sass */
+#footer .f-contents .f-sns li a {
+  color: #757575;
+}
+/* line 113, sass/style.sass */
+#footer .f-contents nav.f-nav {
+  clear: both;
+  padding: 20px;
+}
+/* line 116, sass/style.sass */
+#footer .f-bottom {
+  border-top: 1px solid #ccc;
+  padding: 20px 20px 10px 20px;
+  clear: both;
+  text-align: right;
+}
+/* line 121, sass/style.sass */
+#footer .f-bottom .copy {
+  color: #645D5D;
+}
+
+/* line 127, sass/style.sass */
+.all_count {
+  display: none;
+}
+
+/* line 131, sass/style.sass */
+#root_path {
+  display: none;
+}
+
+/* line 135, sass/style.sass */
+.header-main {
+  overflow: hidden;
+  padding: 5px 0;
+  height: 100px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 143, sass/style.sass */
+.icon-left {
+  margin-right: 8px;
+}
+
+/* line 147, sass/style.sass */
+.sns-icons {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 154, sass/style.sass */
+.more-btn {
+  padding: 15px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+/* line 161, sass/style.sass */
+.glid_display {
+  width: 100%;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* line 168, sass/style.sass */
+.wp_related_posts {
+  margin-top: 100px;
+  overflow: hidden;
+}
+/* line 171, sass/style.sass */
+.wp_related_posts h3.related_post_title {
+  font-size: 16px;
+  text-align: left;
+  padding: 15px 25px;
+  border-top: 1px solid #f8f8f8;
+}
+
+/* line 178, sass/style.sass */
+.flexslider {
+  overflow: hidden;
+  position: relative;
+}
+/* line 182, sass/style.sass */
+.flexslider ul .fix_outer {
+  position: relative;
+}
+/* line 185, sass/style.sass */
+.flexslider ul li img {
+  width: 100%;
+  height: 100%;
+}
+/* line 189, sass/style.sass */
+.flexslider ul li .flex_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 1100px;
+  height: 270px;
+  padding: 20px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: -550px;
+  margin-top: -135px;
+}
+
+/* line 205, sass/style.sass */
+.news-bgcolor {
+  background-color: #ff0000;
+}
+
+/* line 207, sass/style.sass */
+.release-bgcolor {
+  background-color: #1AC6C9;
+}
+
+/* line 209, sass/style.sass */
+.media-bgcolor {
+  background-color: #80C91A;
+}
+
+/* line 211, sass/style.sass */
+.seminer-bgcolor {
+  background-color: #A21AC9;
+}
+
+/*Google Map */
+/* line 216, sass/style.sass */
+#map {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+/*footer */
+/* line 222, sass/style.sass */
+#page_top {
+  min-width: 1024px;
+  height: 40px;
+  background-color: #c70026;
+  text-align: center;
+}
+
+/* line 228, sass/style.sass */
+.to_top {
+  min-width: 1024px;
+  clear: both;
+  text-align: center;
+  margin: -60px 0 0;
+}
+/* line 233, sass/style.sass */
+.to_top a {
+  display: block;
+}
+/* line 235, sass/style.sass */
+.to_top a img {
+  vertical-align: bottom;
+}
+
+/* line 240, sass/style.sass */
+.m20 {
+  margin: 20px 0;
+}
+
+/* サイトマップ */
+/* line 244, sass/style.sass */
+#sitemap_list li li {
+  background: none !important;
+}
+
+/* タップして拡大（PC非表示） */
+/* line 248, sass/style.sass */
+p.expansion {
+  font-size: 12px;
+  display: none;
+}

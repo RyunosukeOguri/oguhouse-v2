@@ -1,0 +1,17 @@
+# temp files from editors
+*~
+*.bak
+.DS_Store
+.buildpath
+.project
+.settings
+*.tmproj
+build
+.idea
+nbproject/
+wp-content/themes/oguhouse/.sass-cache/*
+
+# hidden files created by Windows
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,251 @@
+@import compass
+@import common
+
+/* 
+ * Theme Name: OGUHOUSE
+ * Author: OGURI
+ * Description: OGUHOUSE作成用のwordpressテーマです。
+ * Version: 2.0
+ * Author URI: http://54.64.115.198/
+ * Tags: OGUHOUSE
+ */
+
+
+/* ======================
+ * #1 header
+ * #2 contents
+ * #3 footer
+ * #9 icon
+ * ======================*/
+
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  -webkit-transition: height 0.15s ease
+  transition: height 0.15s ease
+a
+  text-decoration: none
+a:hover, a:focus
+  color: transparent
+
+li
+  list-style: none
+html
+  margin-top: 0 !important
+body
+  background-color: $white
+  line-height: 1.3em
+  font-size: 14px
+  min-width: 1024px
+  -webkit-text-size-adjust: 100%
+
+
+/* ==============
+ * #9 icon
+ * ============== */
+.i-left
+  margin-right: 5px
+.i-right
+  margin-left: 5px
+.google
+  color: $red
+.git
+  color: $blue
+.facebook
+  color: $deep-blue
+.twitter
+  color: $right-blue
+.sns-icon
+  color: $main-color
+/* ==============
+ * #1 header
+ * ============== */
+#header
+  padding: 20px 15px
+  overflow: hidden
+  +bgColor($glay)
+  border-color: $border-glay
+  .header--sns
+    float: right
+    padding: 10px 5px 0 5px
+.frame_wave
+  img
+    width: 100%
+    height: 400px
+// site Logo
+.site--logo
+  float: left
+  width: 220px
+  padding: 0 20px
+  a
+    color: $main-color
+    .site--logo-title
+      font-size: 26px
+      font-weight: bold
+      margin: 0
+/* ==============
+ * #2 contents
+ * ============== */
+#content
+  overflow: hidden
+  padding: 20px
+
+/* ==============
+ * #3 footer
+ * ============== */
+#footer
+  clear: both
+  padding: 20px 15px 5px 15px
+  background-color: #F1F1F1
+  overflow: hidden
+  .f-contents
+    padding: 20px
+    overflow: hidden
+    .f-sns
+      float: left
+      li
+        float: left
+        padding: 10px
+        display: inline-block
+        a
+          color: $main-color
+    nav.f-nav
+      clear: both
+      padding: 20px
+  .f-bottom
+    border-top: 1px solid #ccc
+    padding: 20px 20px 10px 20px
+    clear: both
+    text-align: right
+    .copy
+      color: #645D5D
+
+
+
+//全件表示
+.all_count
+  display: none
+
+//page_pasth_hide
+#root_path
+  display: none
+
+//ヘッダーメイン
+.header-main
+  overflow: hidden
+  padding: 5px 0
+  height: 100px
+  max-width: 1024px
+  margin: 0 auto
+
+//アイコン系
+.icon-left
+  margin-right: 8px
+
+//SNSアイコン
+.sns-icons
+  display: inline-block
+  float: left
+  margin-right: 10px
+
+
+//もっと見るボタン
+.more-btn 
+  padding: 15px 0
+  text-align: center
+  display: inline-block
+
+
+//グリッドstyle
+.glid_display
+  width: 100%
+  text-align: center
+  padding-top: 70px
+  padding-bottom: 70px
+
+//関連記事MENU
+.wp_related_posts 
+  margin-top: 100px
+  overflow: hidden
+  h3.related_post_title
+    font-size: 16px
+    text-align: left
+    padding: 15px 25px
+    border-top: 1px solid $glay
+
+//slider用
+.flexslider
+  overflow: hidden
+  position: relative
+  ul
+    .fix_outer
+      position: relative
+    li
+      img
+        width: 100%
+        height: 100%
+      
+      .flex_inner
+        // +bgColor(rgba(7, 28, 63, 0.4))
+        position: absolute
+        top: 50%
+        left: 50%
+        text-align: center
+        width: $fix_inner_width
+        height: $fix_inner_height
+        padding: 20px 10px
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        +fix_width($fix_inner_width)
+        +fix_height($fix_inner_height)
+
+//タグカラー
+.news-bgcolor
+  background-color: #ff0000
+.release-bgcolor
+  background-color: #1AC6C9
+.media-bgcolor
+  background-color: #80C91A
+.seminer-bgcolor
+  background-color: #A21AC9
+
+
+/*Google Map*/
+#map
+  width: 600px
+  height: 400px
+  margin-bottom: 30px
+
+/*footer*/
+#page_top
+  min-width: 1024px
+  height: 40px
+  background-color: #c70026
+  text-align: center
+
+.to_top
+  min-width: 1024px
+  clear: both
+  text-align: center
+  margin: -60px 0 0
+  a
+    display: block
+    img
+      vertical-align: bottom
+
+
+
+.m20
+  margin: 20px 0
+
+/* サイトマップ */
+#sitemap_list li li
+  background: none !important
+
+/* タップして拡大（PC非表示） */
+p.expansion
+  font-size: 12px
+  display: none
+

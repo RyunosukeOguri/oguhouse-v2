@@ -1,0 +1,69 @@
+
+$white         : #FFFFFF
+$glay          : #f8f8f8
+$border-glay   : #e7e7e7
+$black         : #33373a
+
+$red           : #DF3737
+$blue          : #3680B1
+$deep-blue     : #1F4096
+$right-blue    : #5BCDE9
+$main-color    : #757575
+
+$content       : 1070px
+$font-small    : 10px
+$font-small-02 : 12px
+$font-small-03 : 14px
+$font-mid      : 16px
+$font-mid-02   : 18px
+$font-mid-03   : 20px
+$font-big      : 22px
+$font-big-02   : 24px
+$font-big-03   : 26px
+
+
+=prefix($set, $size)
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, ""
+    #{$prefix}#{$set}: $size
+
+=transition($duration: 3s)
+  -webkit-transition: $duration ease-out
+  -moz-transition: $duration ease-out
+  -ms-transition: $duration ease-out
+  -o-transition: $duration ease-out
+  transition: $duration ease-out
+
+=bgImage($fileName, $place: top right, $repeat: no-repeat)
+  background:
+    image: url("./images/#{$fileName}")
+    repeat: $repeat
+    position: $place
+
+=bgColor($color)
+  background-color: $color
+
+=bgGrade($prefix, $high, $low)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $high), color-stop(1, $low))
+  background-image: -o-linear-gradient(bottom, $high 0%, $low 100%)
+  background-image: -moz-linear-gradient(bottom, $high 0%, $low 100%)
+  background-image: -webkit-linear-gradient(bottom, $high 0%, $low 100%)
+  background-image: -ms-linear-gradient(bottom, $high 0%, $low 100%)
+  background-image: linear-gradient(to bottom, $high 0%, $low 100%)
+
+// トップページスライダー ２枚目の中央配置設定
+//中央配置の横幅
+$fix_inner_width: 1100px
+
+//中央は位置の縦幅
+$fix_inner_height: 270px
+
+//position系を中央に配置できるやつ
+=fix_width($fix_inner_width)
+  $fix_inner_w_harf: $fix_inner_width / 2
+  margin-left: -$fix_inner_w_harf
+
+=fix_height($fix_inner_height)
+  $fix_inner_h_harf: $fix_inner_height / 2
+  margin-top: -$fix_inner_h_harf
+
+  
