@@ -2,15 +2,22 @@
 $white         : #FFFFFF
 $glay          : #f8f8f8
 $border-glay   : #e7e7e7
+$border-glay   : #D4D2D2
 $black         : #33373a
 
 $red           : #DF3737
 $blue          : #3680B1
 $deep-blue     : #1F4096
 $right-blue    : #5BCDE9
+$right-glay    : #F2F2EF
 $main-color    : #757575
+$glay-deep     : #A29C9C
+$green         : #61b798
+$blown         : #B9A99C
+$wine          : #931B4D
 
-$content       : 1070px
+
+$view-inner    : 1024px
 $font-small    : 10px
 $font-small-02 : 12px
 $font-small-03 : 14px
@@ -33,11 +40,12 @@ $font-big-03   : 26px
   -o-transition: $duration ease-out
   transition: $duration ease-out
 
-=bgImage($fileName, $place: top right, $repeat: no-repeat)
+=bgImage($fileName, $place: top left, $repeat: no-repeat, $size: 100%)
   background:
-    image: url("./images/#{$fileName}")
+    image: url("./img/#{$fileName}")
     repeat: $repeat
     position: $place
+    size: $size
 
 =bgColor($color)
   background-color: $color
@@ -66,4 +74,8 @@ $fix_inner_height: 270px
   $fix_inner_h_harf: $fix_inner_height / 2
   margin-top: -$fix_inner_h_harf
 
-  
+// インナー横幅
+=inner-width($width)
+  width: $width
+  margin: 0 auto  
+

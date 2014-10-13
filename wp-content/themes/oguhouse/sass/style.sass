@@ -26,8 +26,9 @@
   transition: height 0.15s ease
 a
   text-decoration: none
+  color: $right-blue
 a:hover, a:focus
-  color: transparent
+  color: $right-blue - 100
 
 li
   list-style: none
@@ -48,6 +49,15 @@ body
   margin-right: 5px
 .i-right
   margin-left: 5px
+
+.i-green
+  color: $green 
+.i-blue
+  color: $blue
+.i-wine
+  color: $wine
+.i-blown
+  color: $blown
 .google
   color: $red
 .git
@@ -58,21 +68,69 @@ body
   color: $right-blue
 .sns-icon
   color: $main-color
+
+
 /* ==============
  * #1 header
  * ============== */
 #header
   padding: 20px 15px
   overflow: hidden
-  +bgColor($glay)
   border-color: $border-glay
+  position: absolute
+  width: 100%
+  z-index: 1000
+
   .header--sns
     float: right
     padding: 10px 5px 0 5px
-.frame_wave
+
+.full-img
+  position: absolute
+  width: 100%
+  overflow: hidden
+  z-index: 40
+  height: 580px
   img
     width: 100%
-    height: 400px
+.frame_wave
+  position: relative
+  color: $white
+  z-index: 50
+  .frame_backdrop
+    position: absolute
+    z-index: 60
+    top: 400px
+    width: 100%
+    img
+      width: 100%
+
+  .frame-left
+    position: absolute
+    top: 100px
+    left: 30px
+    z-index: 1000
+    .user--name
+      padding: 10px 5px
+      font-size: 1.4em
+    .user--message
+      padding: 5px
+      line-height: 20px
+  .fram-right
+    position: absolute
+    top: 100px
+    right: 30px
+    z-index: 1000
+    h1
+      font-size: 6em
+      margin-bottom: 30px
+    p
+      font-size: 20px
+      line-height: 2em
+
+//thumbnail 
+.thumb-layout
+  border: 3px solid $white
 // site Logo
 .site--logo
   float: left
@@ -89,19 +147,183 @@ body
  * ============== */
 #content
   overflow: hidden
+  padding-top: 600px
+#single-content
+  overflow: hidden
+  padding-top: 100px
+  padding-bottom: 100px
+.main-col-single
+  padding: 10px 20px
+
+.view
   padding: 20px
+  .view-inner
+    +inner-width($view-inner)
+.view--glay
+  +bgColor($glay)
+.view--white
+  +bgColor($white)
+
+.topic-field
+  ul
+    overflow: hidden
+    li
+      a
+        display: block
+        +bgColor($right-glay)
+        .post-title
+          font-size: 16px
+          padding: 10px
+          color: $right-blue
+        .post-excerpt
+          color: $black
+          padding: 10px
+
+.thumbnail_cut
+  overflow: hidden
+  height: 150px
+  img
+    width: 100%
+.blog-title
+  border-left: 5px solid #2DB0CD
+  padding: 10px 10px 10px 20px
+.blog-category
+  padding: 10px
+  overflow: hidden
+  .blog--cate-title
+    float: left
+    padding: 0 10px
+  ul
+    float: left
+    li
+      float: left
+      a
+        color: $glay-deep
+.blog-post
+  padding: 20px
+  pre
+    padding: 10px
+    margin: 10px
+/* ==============
+ * #2-1 最新記事
+ * ============== */
+.news_feed
+  padding: 20px 5px
+  ul
+    > li
+      display: table
+      width: 100%
+      padding: 5px
+      div
+        font-size: 16px
+        width: 30%
+        text-align: center
+        display: table-cell
+
+      a.title
+        font-size: 16px
+        display: table-cell
+        color: $black
+        text-decoration: underline
 
 /* ==============
- * #3 footer
+ * #3 sidebar
+ * ============== */
+.side-contents
+  padding-right: 40px
+  aside
+    padding: 10px 2px
+    margin-bottom: 20px
+  h3.new-post-title
+    border-top: 4px solid $green
+    padding: 10px
+    border-bottom: 1px dotted $glay-deep
+  h3.nav-title
+    border-top: 4px solid $red
+    padding: 10px
+    border-bottom: 1px dotted $glay-deep
+  h3.twitter-title
+    border-top: 4px solid $blue
+    padding: 10px
+  h3.tags-title
+    border-top: 4px solid $blown
+    padding: 10px
+    border-bottom: 1px dotted $glay-deep
+  h3.cate-title
+    border-top: 4px solid $wine
+    padding: 10px
+    border-bottom: 1px dotted $glay-deep
+
+
+ul.side--nav
+  padding: 10px 0
+  li
+    border-bottom: 1px solid #D4D2D2
+    a
+      color: $green
+      display: table
+      padding: 10px
+      > img
+        display: table-cell
+        width: 60px
+        height: auto
+        margin-right: 10px
+      > p
+        display: table-cell
+        vertical-align: top
+
+.side-tags
+  padding: 20px 10px
+  a
+    display: inline-block
+    padding: 5px 10px
+    margin: 3px 1px
+    border-radius: 5px
+    background-color: #E3DEDE
+    color: #6F6C6C
+ul.side-category
+  li
+    color: $blue
+    padding: 5px 10px
+    border-bottom: 1px dotted $glay-deep
+    font-size: 14px
+    a
+      font-size: 12px
+      display: inline-block
+
+.thumb--small
+  margin-right: 10px
+  overflow: hidden
+
+
+/* ==============
+ * #4 footer
  * ============== */
 #footer
   clear: both
+  color: $white
   padding: 20px 15px 5px 15px
   background-color: #F1F1F1
-  overflow: hidden
+  +bgImage("common/frame_wave.png",top left, no-repeat, 100% 380px)
+  height: 400px
+  position: relative
+  .to_top
+    position: absolute
+    left: 50%
+    top: -20px
+    text-align: center
+    padding: 5px 10px
+    border-radius: 5px
+    background-color: #656A6A
+    +fix_width(40px)
+    a
+      color: $white
   .f-contents
     padding: 20px
     overflow: hidden
+    .site--logo
+      a
+        color: $white
     .f-sns
       float: left
       li
@@ -109,13 +331,17 @@ body
         padding: 10px
         display: inline-block
         a
-          color: $main-color
+          color: $white
+          i
+            color: $white
     nav.f-nav
       clear: both
       padding: 20px
   .f-bottom
-    border-top: 1px solid #ccc
-    padding: 20px 20px 10px 20px
+    position: absolute
+    bottom: 0
+    right: 0
+    padding: 20px
     clear: both
     text-align: right
     .copy
@@ -224,17 +450,6 @@ body
   height: 40px
   background-color: #c70026
   text-align: center
-
-.to_top
-  min-width: 1024px
-  clear: both
-  text-align: center
-  margin: -60px 0 0
-  a
-    display: block
-    img
-      vertical-align: bottom
-
 
 
 .m20

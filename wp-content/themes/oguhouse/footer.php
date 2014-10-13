@@ -9,15 +9,12 @@
  * @since Oguhouse 2.0
  */
 ?>
-		</div><!-- #content -->
-		<div class="to_top">
-			<a href="#">
-				TOPへもどる
-			</a>
-		</div>
+
 
 		<footer id="footer">
-
+			<div class="to_top">
+				<a href="#"><i class="fa fa-arrow-up fa-2x"></i></a>
+			</div>
 			<div class="f-contents">
 				<!-- Site Logo -->
 				<div class="site--logo">
@@ -32,7 +29,8 @@
 					<li class="sns-btn"><a target="_blank" href="https://github.com/RyunosukeOguri"><i class="fa fa-github fa-2x i-left sns-icon"></i>GitHub</a></li>
 					<li class="sns-btn"><a target="_blank" href="https://twitter.com/amagurik2"><i class="fa fa-twitter-square fa-2x i-left sns-icon"></i>Twitter</a></li>
 					<li class="sns-btn"><a target="_blank" href="https://www.facebook.com/ryuunosuke.oguri"><i class="fa fa-facebook-square fa-2x i-left sns-icon"></i>Facebook</a></li>
-				</ul>
+					<li class="sns-btn"><a target="_blank" href="#"><i class="fa fa-rss-square fa-2x i-left sns-icon"></i>rss</a></li>
+   		  </ul>
 			  <!-- Global Nav -->
 				<nav class="f-nav">
 		 			<?php wp_nav_menu( array( 'menu' => 'footer_nav') ); ?>

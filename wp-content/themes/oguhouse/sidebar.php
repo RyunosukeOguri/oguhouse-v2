@@ -9,9 +9,10 @@
 ?>
 
 <div class="side-contents">
-  <ul class="side--nav">
+  <h3 class="h3 new-post-title"><i class="fa fa-archive i-green i-left"></i>最新の記事</h3>
+  <ul class="nav side--nav">
     <?php
-
+      get_new_posts(10);
     ?>
   </ul>
   <ul class="side--banner">
@@ -21,7 +22,7 @@
         'baner02' => 'baner_link02',
         'baner03' => 'baner_link03',
       ];
-      get_side_baners($args, 360); 
+      // get_side_baners($args, 360); 
     ?>
   </ul>
 </div>

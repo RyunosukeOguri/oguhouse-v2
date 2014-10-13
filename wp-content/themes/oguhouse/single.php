@@ -12,26 +12,43 @@
  */
 
 get_header(); ?>
+<div id="single-content" class="contents">
+	<div class="container">
+		<div class="row">
 
-	<div id="main" class="main-colmun">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div><!-- .entry-content -->
-		<?php endwhile; // end of the loop. ?>
+<!-- 			<div id="site-left" class="col-xs-4 col-md-4">
+				<section class="row">
+					<?php get_sidebar(); ?>
+				</section>
+			</div> -->
 
-		<div class="wp_related_posts">
-			<h3 class="related_post_title">関連する記事</h3>
-			<div class="child_content">
-				<ul>
-					<?php get_related_posts(3, "", "pc"); ?>
-				</ul>
+			<div id="main-colmun" class="main-col-single col-xs-8 col-sm-8">
+				<section class="row">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<article class="entry-content">
+						<h1 class="h1 blog-title"><samp><?php the_title(); ?></samp></h1>
+						<div class="blog-category">
+							<p class="blog--cate-title">カテゴリー: </p><?php the_category(); ?>
+						</div>
+						<div class="blog-post">
+							<?php the_content(); ?>
+						</div>
+					</article><!-- .entry-content -->
+				<?php endwhile; // end of the loop. ?>
+				</section>
+				<section class="row related_post">
+					<?php get_related_posts(6, $post->post_name, 'pc'); ?>
+				</section>
+
+			</div><!-- .main-colmun -->
+
+			<div id="site-right" class="col-xs-4 col-md-4">
+				<section class="row">
+					<?php get_sidebar('single'); ?>
+				</section>
 			</div>
-		</div><!-- .wp_related_posts -->
 
-	</div><!-- .main-colmun -->
-	<div id="side" class="site-side_ber">
-	<?php get_sidebar(); ?>
-	</div>
-
-<?php get_footer();
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- #single-content -->
+<?php get_footer(); ?>  <!-- footer.php -->
