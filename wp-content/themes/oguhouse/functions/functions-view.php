@@ -9,7 +9,7 @@
 function get_related_posts($per_page, $slug_name, $device = "pc"){
 	global $post;
 	//カスタムフィールド：関連記事を取得
-	// $get_field = get_field('related_post', $post->ID);
+	$get_field = get_field('related_post', $post->ID);
 	//関連記事の設定がされている場合
 	if(!empty($get_field)) {
 		$get_posts = $get_field;
@@ -34,7 +34,6 @@ function get_related_posts($per_page, $slug_name, $device = "pc"){
 	    			<?php get_thumbnail_orijinal($post->ID, $post->post_name); ?>
 	        </div>
 	        <p class="post-title"><?php echo string_text($post->post_title,0, textCount_is_device($device) ); ?></p>
-				  <p class="post-excerpt"><?php echo string_text($post->post_excerpt,0,24); ?></p>
 				</a>
       </li>
       <?php

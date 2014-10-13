@@ -35,7 +35,12 @@
 	<?php endif; ?>
   
 <!-- #header -->
-<header id="header">
+<?php if(is_home()){ ?> 
+	<header id="header">
+<?php }else{ ?>
+	<header id="header" class="header-single">
+<?php }; ?>
+
 	<div class="site--logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<p class="site--logo-title">OGU<i class="fa fa-home"></i>OUSE</p>
