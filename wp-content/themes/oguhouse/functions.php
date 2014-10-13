@@ -1,5 +1,6 @@
 <?php
 
 
-require_once('functions-admin.php');
-require_once('functions-view.php');
+require_once('functions/functions-admin.php');
+require_once('functions/functions-common.php');
+require_once('functions/functions-view.php');
