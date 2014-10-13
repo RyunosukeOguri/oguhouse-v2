@@ -9,7 +9,7 @@
 function get_related_posts($per_page, $slug_name, $device = "pc"){
 	global $post;
 	//カスタムフィールド：関連記事を取得
-	$get_field = get_field('related_post', $post->ID);
+	// $get_field = get_field('related_post', $post->ID);
 	//関連記事の設定がされている場合
 	if(!empty($get_field)) {
 		$get_posts = $get_field;
