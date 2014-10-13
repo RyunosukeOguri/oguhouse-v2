@@ -9,6 +9,7 @@
 	<div class="col-md-12 view view--white">
 		<div class="row">
 			<section class="view-inner">
+				<h1 class="h1">Topics</h1>
 				<div class="topic-field row">
 					<ul>
 						<?php echo get_posts_topic(3, "pc"); ?>

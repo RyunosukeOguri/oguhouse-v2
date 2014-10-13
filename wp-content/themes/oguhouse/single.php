@@ -37,7 +37,10 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 				</section>
 				<section class="row related_post">
-					<?php get_related_posts(6, $post->post_name, 'pc'); ?>
+					<h3>関連記事</h3>
+					<ul>
+						<?php get_related_posts(6, $post->post_name, 'pc'); ?>
+					</ul>
 				</section>
 
 			</div><!-- .main-colmun -->
