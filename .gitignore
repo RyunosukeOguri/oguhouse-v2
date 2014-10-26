@@ -15,3 +15,6 @@ wp-content/themes/oguhouse/.sass-cache/*
 Thumbs.db
 desktop.ini
 
+# aws s3 uploads
+wp-config.php
+.htaccess
