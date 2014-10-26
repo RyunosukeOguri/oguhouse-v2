@@ -28,14 +28,15 @@ function get_related_posts($per_page, $slug_name, $device = "pc"){
   foreach( $get_posts as $post ) {
       setup_postdata($post);
       ?>
-      <li class="thumbnail col-xs-6 col-md-4">
-    		<a href="<?php the_permalink(); ?>">
-	    		<div class="thumbnail_cut">
-	    			<?php get_thumbnail_orijinal($post->ID, $post->post_name); ?>
-	        </div>
-	        <p class="post-title"><?php echo string_text($post->post_title,0, textCount_is_device($device) ); ?></p>
+			<li class="col-xs-12 col-sm-12 col-md-12">
+				<a href="<?php the_permalink(); ?>">
+	          <?php get_thumbnail_orijinal($post->ID, $post->post_name, 'medium thumbnail'); ?>
+					<p>
+					<i class='fa fa-location-arrow i-left'></i>
+					<?php echo string_text($post->post_title,0,70); ?>
+					</p>
 				</a>
-      </li>
+			</li>
       <?php
   }
   wp_reset_postdata();
@@ -53,13 +54,15 @@ function get_posts_topic($per_page, $device = "pc"){
   foreach( $get_posts as $post ) {
       setup_postdata($post);
       ?>
-      <li class="col-xs-6 col-md-4">
+      <li class="col-xs-12 col-sm-6 col-md-4">
     		<a class="thumbnail" href="<?php the_permalink(); ?>">
 	    		<div class="thumbnail_cut">
 	    			<?php get_thumbnail_orijinal($post->ID, $post->post_name); ?>
 	        </div>
 	        <p class="post-title"><?php echo string_text($post->post_title,0, textCount_is_device($device) ); ?></p>
-				  <p class="post-excerpt"><?php echo string_text($post->post_excerpt,0,36); ?></p>
+				  <p class="post-excerpt">
+				  	<?php echo string_text($post->post_excerpt,0,36); ?>
+				  </p>
 				</a>
       </li>
       <?php
@@ -157,8 +160,7 @@ function get_post_categorys_sim($slug_name, $per_page){
 	];
 
 	$posts = get_posts($args);
-	return $posts;
-	
+	return $posts;	
 }
 
 
@@ -190,7 +192,7 @@ function textCount_is_device($device = "pc") {
 	if ( $device == "smart" ) {
 		return 16;
 	} else {
-		return 30;
+		return 25;
 	}
 }
 /**
@@ -201,6 +203,7 @@ function textCount_is_device($device = "pc") {
  * @return void(string)
  **/
 function string_text($text, $offset, $limit) {
+
 	//指定した文字数より多い場合は語尾に...をつける
 	if (mb_strlen($text) >= $limit) {
 		return mb_substr(strip_tags($text) ,$offset ,$limit).'...';
