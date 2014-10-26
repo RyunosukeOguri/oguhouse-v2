@@ -29,10 +29,10 @@
 <div id="root_path"><?php bloginfo('url'); ?></div>
   <?php if(is_home()) : ?> 
 		<!-- frame img -->
-	  <div class="full-img">
+<!-- 	  <div class="full-img">
 	    <?php echo get_img_thumbnail("common/backdrop.png", array("width" => "1200", "height" => "629") ); ?>
 	  </div>
-	<?php endif; ?>
+ -->	<?php endif; ?>
   
 <!-- #header -->
 <?php if(is_home()){ ?> 
@@ -50,6 +50,23 @@
 	<div class="header-singin">
 
 	</div>
+  <!--グローバルナビ-->
+  <div class="nav-hamburger">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle nav-button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+	  <div class="ncollapse navbar-collapse nav-toggle" style="height: 0px; overflow: hidden;">
+			<?php wp_nav_menu( array( 'menu' => 'global_nav', 'menu_class' => 'nav-menu') ); ?>
+    </div>
+  </div>
+  <nav id="primary-navigation" class="site-navigation primary-navigation global-nav" role="navigation">
+		<?php wp_nav_menu( array( 'menu' => 'global_nav', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
 	<div class="header--sns">
 		<a class="sns-btn-a" target="_blank" href="https://plus.google.com/u/0/115875078341552818583/posts"><i class="fa fa-google-plus-square fa-2x i-left google"></i></a>
 		<a class="sns-btn-a" target="_blank" href="https://github.com/RyunosukeOguri"><i class="fa fa-github fa-2x i-left git"></i></a>

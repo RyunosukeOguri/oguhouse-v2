@@ -15,13 +15,6 @@ get_header(); ?>
 <div id="single-content" class="contents">
 	<div class="container">
 		<div class="row">
-
-<!-- 			<div id="site-left" class="col-xs-4 col-md-4">
-				<section class="row">
-					<?php get_sidebar(); ?>
-				</section>
-			</div> -->
-
 			<div id="main-colmun" class="col-xs-12 col-sm-12 col-md-9">
 				<section class="row">
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -31,6 +24,9 @@ get_header(); ?>
 						<div class="blog-category">
 							<div class="blog--cate-title"><i class="fa fa-tags i-blown"></i></div>
 							 <?php the_category(); ?>
+						</div>
+						<div class="text-center">
+							<?php the_post_thumbnail('medium'); ?>
 						</div>
 						<div class="blog-post">
 							<?php the_content(); ?>
@@ -46,12 +42,8 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 				</section>
 			</div><!-- .main-colmun -->
-
-			<div id="site-right" class="col-xs-12 col-sm-12 col-md-3">
-				<section class="row">
-					<?php get_sidebar('single'); ?>
-				</section>
-			</div>
+      <!-- sidebar -->
+			<?php get_sidebar('single'); ?>
 
 		</div><!-- .row -->
 	</div><!-- .container -->
