@@ -35,12 +35,11 @@ li
 html
   margin-top: 0 !important
 body
-  background-color: $white
+  background-color: #FAFAFA
   line-height: 1.3em
   font-size: 14px
-  min-width: 1024px
   -webkit-text-size-adjust: 100%
-
+  color: #7B7979
 
 /* ==============
  * #9 icon
@@ -50,6 +49,8 @@ body
 .i-right
   margin-left: 5px
 
+.i-orange
+  color: $orange
 .i-green
   color: $green 
 .i-blue
@@ -150,13 +151,53 @@ body
  * ============== */
 #content
   overflow: hidden
-  padding-top: 600px
+  padding-top: 585px
+
 #single-content
   overflow: hidden
-  padding-top: 100px
-  padding-bottom: 100px
+  padding: 120px 10px 100px 10px
+  @media only screen and (max-width: $tablet)
+    padding: 180px 10px 100px 10px
+  h1
+    font-size: 1.8em !important
+    @media only screen and (max-width: $tablet)
+      font-size: 1.2em !important
+  h2
+    font-size: 1.6em !important
+
+  h3
+    font-size: 1.2em !important
+
+  h4
+    font-size: 1.4em !important
+
+  .entry-content
+    padding: 20px
+    margin: 0 50px 10px 10px
+    background-color: $white
+    border: 1px solid $right-glay
+    @media only screen and (max-width: $tablet)
+      padding: 10px
+      margin: 0
+    .entry-date  
+      text-align: right
+      display: block
+      background-color: #F5F5F5
+      padding: 5px
+      position: absolute
+      top: 2px
+      right: 52px
+      font-size: 11px
+      color: #837E7E
+      @media only screen and (max-width: $tablet)
+        top: -30px
+        right: 2px
+    p
+      line-height: 26px
+
 .main-col-single
   padding: 10px 20px
+
 
 .view
   padding: 20px
@@ -177,7 +218,7 @@ body
         .post-title
           font-size: 16px
           padding: 10px
-          color: $right-blue
+          color: $cocoa
         .post-excerpt
           color: $black
           padding: 10px
@@ -188,14 +229,18 @@ body
   img
     width: 100%
 .blog-title
-  border-left: 5px solid #2DB0CD
-  padding: 10px 10px 10px 20px
+  border-left: 5px solid $green
+  color: #25A575
+  padding: 20px 10px 10px 20px
 .blog-category
-  padding: 10px
+  padding: 10px 0px
   overflow: hidden
+  display: table
   .blog--cate-title
-    float: left
     padding: 0 10px
+    display: table-cell
+    vertical-align: middle
+
   ul
     float: left
     li
@@ -203,10 +248,9 @@ body
       a
         color: $glay-deep
 .blog-post
-  padding: 20px
   pre
     padding: 10px
-    margin: 10px
+    margin: 5px 2px
 /* ==============
  * #2-1 最新記事
  * ============== */
@@ -233,12 +277,13 @@ body
  * #3 sidebar
  * ============== */
 .side-contents
-  padding-right: 40px
+  @media only screen and (max-width: $tablet)
+    margin-top: 30px
   aside
     padding: 10px 2px
     margin-bottom: 20px
   h3.new-post-title
-    border-top: 4px solid $green
+    border-top: 4px solid $orange
     padding: 10px
     border-bottom: 1px dotted $glay-deep
   h3.nav-title
@@ -259,11 +304,11 @@ body
 
 
 ul.side--nav
-  padding: 10px 0
+  padding: 0
   li
     border-bottom: 1px solid #D4D2D2
     a
-      color: $green
+      color: $orange
       display: table
       padding: 10px
       > img
@@ -284,15 +329,21 @@ ul.side--nav
     border-radius: 5px
     background-color: #E3DEDE
     color: #6F6C6C
+    &:hover
+      background-color: #18778E
+      color: #fff
 ul.side-category
   li
-    color: $blue
+    color: $cocoa
     padding: 5px 10px
-    border-bottom: 1px dotted $glay-deep
+    border-bottom: 1px solid $glay-deep
     font-size: 14px
+    &:hover
+      background-color: $right-glay
     a
       font-size: 12px
       display: inline-block
+      color: $cocoa
 
 .thumb--small
   margin-right: 10px
@@ -352,8 +403,44 @@ ul.side-category
 
 //pre
 pre
+  background: rgb(234, 234, 234)
+  color: #6B6967
+pre.black
   background: rgba(0, 0, 0, 1)
   color: #4EFE1C
+/* ==============
+ * #5 related post
+ * ============== */
+.related_post
+  padding: 50px 10px 10px
+  @media only screen and (max-width: $tablet)
+    padding: 20px 10px
+
+  h3
+    margin: 0
+    border-bottom: 1px dotted #ccc
+    padding: 10px 5px
+    color: $cocoa
+    font-size: 1.2em
+    border-left: 5px solid $cocoa
+  ul
+    li
+      border-bottom: 1px solid #D4D2D2
+      padding: 0
+      a
+        color: $cocoa
+        display: table
+        padding: 10px
+        > img
+          display: table-cell
+          width: 60px
+          height: auto
+          margin-right: 10px
+        > p
+          width: 100%
+          display: table-cell
+          vertical-align: middle
+
 
 //全件表示
 .all_count
@@ -396,15 +483,6 @@ pre
   padding-top: 70px
   padding-bottom: 70px
 
-//関連記事MENU
-.wp_related_posts 
-  margin-top: 100px
-  overflow: hidden
-  h3.related_post_title
-    font-size: 16px
-    text-align: left
-    padding: 15px 25px
-    border-top: 1px solid $glay
 
 //slider用
 .flexslider

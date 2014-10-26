@@ -12,7 +12,7 @@
 
   <!-- new article [] -->
   <aside>
-    <h3 class="h3 new-post-title"><i class="fa fa-archive i-green i-left"></i>最新の記事</h3>
+    <h3 class="h3 new-post-title"><i class="fa fa-star i-orange i-left"></i>最近の投稿</h3>
       <ul class="nav side--nav">
       <?php
         get_new_posts(10);

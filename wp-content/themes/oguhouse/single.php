@@ -22,30 +22,32 @@ get_header(); ?>
 				</section>
 			</div> -->
 
-			<div id="main-colmun" class="main-col-single col-xs-8 col-sm-8">
+			<div id="main-colmun" class="col-xs-12 col-sm-12 col-md-9">
 				<section class="row">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article class="entry-content">
+           <span class="entry-date">投稿日: <?php the_date(); ?></span>
 						<h1 class="h1 blog-title"><samp><?php the_title(); ?></samp></h1>
 						<div class="blog-category">
-							<p class="blog--cate-title">カテゴリー: </p><?php the_category(); ?>
+							<div class="blog--cate-title"><i class="fa fa-tags i-blown"></i></div>
+							 <?php the_category(); ?>
 						</div>
 						<div class="blog-post">
 							<?php the_content(); ?>
 						</div>
+					  <div class="row related_post">
+					  	<h3>関連記事</h3>
+							<ul class="nav">
+								<?php get_related_posts(6, $post->post_name, 'pc'); ?>
+							</ul>
+						</div>
+
 					</article><!-- .entry-content -->
 				<?php endwhile; // end of the loop. ?>
 				</section>
-				<section class="row related_post">
-					<h3>関連記事</h3>
-					<ul>
-						<?php get_related_posts(6, $post->post_name, 'pc'); ?>
-					</ul>
-				</section>
-
 			</div><!-- .main-colmun -->
 
-			<div id="site-right" class="col-xs-4 col-md-4">
+			<div id="site-right" class="col-xs-12 col-sm-12 col-md-3">
 				<section class="row">
 					<?php get_sidebar('single'); ?>
 				</section>

@@ -28,14 +28,15 @@ function get_related_posts($per_page, $slug_name, $device = "pc"){
   foreach( $get_posts as $post ) {
       setup_postdata($post);
       ?>
-      <li class="thumbnail col-xs-6 col-md-4">
-    		<a href="<?php the_permalink(); ?>">
-	    		<div class="thumbnail_cut">
-	    			<?php get_thumbnail_orijinal($post->ID, $post->post_name); ?>
-	        </div>
-	        <p class="post-title"><?php echo string_text($post->post_title,0, textCount_is_device($device) ); ?></p>
+			<li class="col-xs-12 col-sm-12 col-md-12">
+				<a href="<?php the_permalink(); ?>">
+	          <?php get_thumbnail_orijinal($post->ID, $post->post_name, 'medium thumbnail'); ?>
+					<p>
+					<i class='fa fa-location-arrow i-left'></i>
+					<?php echo string_text($post->post_title,0,70); ?>
+					</p>
 				</a>
-      </li>
+			</li>
       <?php
   }
   wp_reset_postdata();
