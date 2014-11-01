@@ -31,6 +31,11 @@ get_header(); ?>
 						<div class="blog-post">
 							<?php the_content(); ?>
 						</div>
+						<div class="comment">
+							<?php comment_form([
+								'comment_notes_after' => '',
+								]); ?>
+						</div>
 					  <div class="row related_post">
 					  	<h3>関連記事</h3>
 							<ul class="nav">

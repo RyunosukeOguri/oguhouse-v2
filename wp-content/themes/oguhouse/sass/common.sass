@@ -10,6 +10,7 @@ $blue          : #3680B1
 $deep-blue     : #1F4096
 $right-blue    : #5BCDE9
 $right-glay    : #F2F2EF
+$deep-glay     : #DDDDDB
 $main-color    : #757575
 $glay-deep     : #A29C9C
 $green         : #25A575
@@ -60,6 +61,12 @@ $tablet: 940px
   background-image: -ms-linear-gradient(bottom, $high 0%, $low 100%)
   background-image: linear-gradient(to bottom, $high 0%, $low 100%)
 
+//selct radio 初期値を消す
+=appearance()
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  
 // トップページスライダー ２枚目の中央配置設定
 //中央配置の横幅
 $fix_inner_width: 1100px
