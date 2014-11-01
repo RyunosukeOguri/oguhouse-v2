@@ -882,11 +882,15 @@ pre.black {
   border: 1px solid #DDDDDB;
 }
 /* line 561, sass/style.sass */
+.page-layout h1 {
+  margin-bottom: 20px;
+}
+/* line 563, sass/style.sass */
 .page-layout .profile-left {
   padding: 0 0 20px 0;
   text-align: center;
 }
-/* line 564, sass/style.sass */
+/* line 566, sass/style.sass */
 .page-layout .profile-left img {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -894,31 +898,31 @@ pre.black {
   border: 1px solid #E0D8D8;
   padding: 5px;
 }
-/* line 570, sass/style.sass */
+/* line 572, sass/style.sass */
 .page-layout .profile-right .range {
   padding: 10px;
   border: 1px dashed #DDDDDB;
   margin-bottom: 20px;
 }
-/* line 574, sass/style.sass */
+/* line 576, sass/style.sass */
 .page-layout .profile-right .range h3 {
   margin-bottom: 10px;
 }
-/* line 577, sass/style.sass */
+/* line 579, sass/style.sass */
 .page-layout ul li {
   padding: 5px;
 }
 
-/* line 586, sass/style.sass */
+/* line 588, sass/style.sass */
 .comment h3 {
   border-bottom: 3px solid #25A575;
   padding: 10px 0 5px;
 }
-/* line 589, sass/style.sass */
+/* line 591, sass/style.sass */
 .comment .form-submit {
   text-align: right;
 }
-/* line 591, sass/style.sass */
+/* line 593, sass/style.sass */
 .comment .form-submit #submit {
   border: 1px solid #098347;
   -moz-border-radius: 3px;
@@ -927,11 +931,11 @@ pre.black {
   background-color: #25A575;
   color: #FFFFFF;
 }
-/* line 596, sass/style.sass */
+/* line 598, sass/style.sass */
 .comment .form-submit #submit:hover {
   background-color: #0BBB79;
 }
-/* line 599, sass/style.sass */
+/* line 601, sass/style.sass */
 .comment textarea {
   width: 100%;
   padding: 10px;
@@ -941,17 +945,17 @@ pre.black {
   border: 1px dashed #ccc;
 }
 
-/* line 605, sass/style.sass */
+/* line 607, sass/style.sass */
 .all_count {
   display: none;
 }
 
-/* line 609, sass/style.sass */
+/* line 611, sass/style.sass */
 #root_path {
   display: none;
 }
 
-/* line 613, sass/style.sass */
+/* line 615, sass/style.sass */
 .header-main {
   overflow: hidden;
   padding: 5px 0;
@@ -960,26 +964,26 @@ pre.black {
   margin: 0 auto;
 }
 
-/* line 621, sass/style.sass */
+/* line 623, sass/style.sass */
 .icon-left {
   margin-right: 8px;
 }
 
-/* line 625, sass/style.sass */
+/* line 627, sass/style.sass */
 .sns-icons {
   display: inline-block;
   float: left;
   margin-right: 10px;
 }
 
-/* line 632, sass/style.sass */
+/* line 634, sass/style.sass */
 .more-btn {
   padding: 15px 0;
   text-align: center;
   display: inline-block;
 }
 
-/* line 639, sass/style.sass */
+/* line 641, sass/style.sass */
 .glid_display {
   width: 100%;
   text-align: center;
@@ -987,21 +991,21 @@ pre.black {
   padding-bottom: 70px;
 }
 
-/* line 647, sass/style.sass */
+/* line 649, sass/style.sass */
 .flexslider {
   overflow: hidden;
   position: relative;
 }
-/* line 651, sass/style.sass */
+/* line 653, sass/style.sass */
 .flexslider ul .fix_outer {
   position: relative;
 }
-/* line 654, sass/style.sass */
+/* line 656, sass/style.sass */
 .flexslider ul li img {
   width: 100%;
   height: 100%;
 }
-/* line 658, sass/style.sass */
+/* line 660, sass/style.sass */
 .flexslider ul li .flex_inner {
   position: absolute;
   top: 50%;
@@ -1017,28 +1021,28 @@ pre.black {
   margin-top: -135px;
 }
 
-/* line 674, sass/style.sass */
+/* line 676, sass/style.sass */
 .news-bgcolor {
   background-color: #ff0000;
 }
 
-/* line 676, sass/style.sass */
+/* line 678, sass/style.sass */
 .release-bgcolor {
   background-color: #1AC6C9;
 }
 
-/* line 678, sass/style.sass */
+/* line 680, sass/style.sass */
 .media-bgcolor {
   background-color: #80C91A;
 }
 
-/* line 680, sass/style.sass */
+/* line 682, sass/style.sass */
 .seminer-bgcolor {
   background-color: #A21AC9;
 }
 
 /*Google Map */
-/* line 685, sass/style.sass */
+/* line 687, sass/style.sass */
 #map {
   width: 600px;
   height: 400px;
@@ -1046,7 +1050,7 @@ pre.black {
 }
 
 /*footer */
-/* line 691, sass/style.sass */
+/* line 693, sass/style.sass */
 #page_top {
   min-width: 1024px;
   height: 40px;
@@ -1054,19 +1058,19 @@ pre.black {
   text-align: center;
 }
 
-/* line 698, sass/style.sass */
+/* line 700, sass/style.sass */
 .m20 {
   margin: 20px 0;
 }
 
 /* サイトマップ */
-/* line 702, sass/style.sass */
+/* line 704, sass/style.sass */
 #sitemap_list li li {
   background: none !important;
 }
 
 /* タップして拡大（PC非表示） */
-/* line 706, sass/style.sass */
+/* line 708, sass/style.sass */
 p.expansion {
   font-size: 12px;
   display: none;
