@@ -23,7 +23,7 @@ get_header(); ?>
 						<h1 class="h1 blog-title"><samp><?php the_title(); ?></samp></h1>
 						<div class="blog-category">
 							<div class="blog--cate-title"><i class="fa fa-tags i-blown"></i></div>
-							 <?php the_category(); ?>
+							 <?php the_category(', '); ?>
 						</div>
 						<div class="text-center">
 							<div class="max-img"><?php the_post_thumbnail('medium'); ?></div>

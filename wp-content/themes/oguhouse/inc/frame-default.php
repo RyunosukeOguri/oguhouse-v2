@@ -14,7 +14,7 @@
     </p>
   </div>
 	<div class="frame-left">
-		<?php echo get_img_thumbnail("common/my_photo_01.png", array("width" => "150", "height" => "150", "class" => "img-circle thumb-layout")); ?>
+		<?php echo get_img_thumbnail("common/my_photo_02.jpg", array("width" => "150", "height" => "150", "class" => "img-circle thumb-layout")); ?>
   	<p class="user--name"> Ryunosuke Oguri </p>
   	<p class="user--message">
   		<span>jobs: Web Engineer</span><br>
