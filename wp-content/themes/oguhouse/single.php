@@ -26,7 +26,7 @@ get_header(); ?>
 							 <?php the_category(); ?>
 						</div>
 						<div class="text-center">
-							<div class="thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+							<div class="max-img"><?php the_post_thumbnail('medium'); ?></div>
 						</div>
 						<div class="blog-post">
 							<?php the_content(); ?>
