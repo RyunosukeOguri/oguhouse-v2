@@ -44,7 +44,7 @@
 	<div class="site--logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<p class="site--logo-title">OGU<i class="fa fa-home"></i>OUSE</p>
-			<small>WEB-CREATER BLOG</small>
+			<small>WEB-CREATOR BLOG</small>
 		</a>
 	</div>
 	<div class="header-singin">

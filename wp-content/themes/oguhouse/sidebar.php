@@ -12,7 +12,7 @@
   <h3 class="h3 new-post-title"><i class="fa fa-archive i-green i-left"></i>最新の記事</h3>
   <ul class="nav side--nav">
     <?php
-      get_new_posts(10);
+      get_new_posts(5);
     ?>
   </ul>
   <ul class="side--banner">

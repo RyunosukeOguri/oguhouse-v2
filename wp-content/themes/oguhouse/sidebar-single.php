@@ -16,7 +16,7 @@
         <h3 class="h3 new-post-title"><i class="fa fa-star i-orange i-left"></i>最近の投稿</h3>
           <ul class="nav side--nav">
           <?php
-            get_new_posts(10);
+            get_new_posts(5);
           ?>
         </ul>
       </aside>
