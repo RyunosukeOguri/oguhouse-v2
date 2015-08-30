@@ -69,4 +69,11 @@ function blog_webclip() {
 }
 add_action('wp_head', 'blog_webclip');
 
-
+/**
+ * 年齢の取得
+ * @return int
+ */
+function get_age($birthday) {
+  $age = (int)((date('Ymd') - date('Ymd', $birthday)) / 10000);
+  return ( $age <= 80 ) ? $age : '';
+}

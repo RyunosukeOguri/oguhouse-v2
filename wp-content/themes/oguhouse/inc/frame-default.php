@@ -19,7 +19,7 @@
   	<p class="user--message">
   		<span>jobs: Web Engineer</span><br>
   		<span>address: Tokyo </span><br>
-  		<span>age: 24</span>
+  		<span>age: <?= get_age(strtotime('1990/03/14')); ?></span>
   	</p>
   </div>
 
