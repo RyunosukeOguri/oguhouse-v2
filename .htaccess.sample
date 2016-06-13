@@ -8,4 +8,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /oguhouse-v2/index.php [L]
 </IfModule>
 
+# xmlrpc.php Not Access
+<Files "xmlrpc.php">
+order deny,allow
+deny from all
+</Files>
+
 # END WordPress
